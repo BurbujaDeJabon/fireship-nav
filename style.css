@@ -1,0 +1,118 @@
+/* Created by Nikki <3 */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    font-size: 16px;
+
+    --transition-speed: 600ms;
+    
+}
+
+body {
+    line-height: 1.6;
+}
+
+/* Header */
+
+header {
+    background-color: black;
+    position: sticky;
+    height: 60px;
+}
+/* Sidebar */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    background-color: #151515;
+    height: 100vh;
+    width: 5rem;
+    padding-top: 60px;
+    transition: width 200ms ease;
+}
+
+.sidebar__nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+}
+
+
+
+.nav__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    color: black;
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: var(--transition-speed);
+}
+
+.nav__link:hover {
+    filter: grayscale(0%);
+}
+
+.link-text {
+    margin-left: 1rem;
+    display: none;
+}
+
+.nav__item a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav__item:last-child {
+    margin-top: auto;
+
+}
+
+/* Nav SVG items */
+
+.nav__link svg {
+    min-width: 2rem;
+    margin: 0 1.5rem;
+    fill: #6649b8;
+}
+/*
+.fa-primary {
+    color: #ff7eee;
+  }
+  
+  .fa-secondary {
+    color: #df49a6;
+  }
+  
+  .fa-primary,
+  .fa-secondary {
+    transition: var(--transition-speed);
+  } */
+
+
+/* Slideout */
+
+.sidebar:hover {
+    width: 16rem;
+}
+
+.sidebar:hover .link-text {
+    display: block;
+}
+
+/* Main */
+
+.main {
+    margin-left: 5rem;
+    margin-top: 60px;
+    padding: 1rem;
+}
